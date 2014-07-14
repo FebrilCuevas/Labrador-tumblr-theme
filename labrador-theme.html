@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html>
+<head>
+    <!--
+       TALLY HO!!!!!!!!!!!!
+	 -->
+     <!--
+       Created by: Febril Cuevas (@febrilcuevas)
+       Theme Name: Labrador
+	   Updated: July 11, 2014
+	   Website: http://febril.co
+	 -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>{block:TagPage}{Tag} &mdash; {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} &mdash; {/block:SearchPage}{block:PostSummary}{PostSummary} &mdash; {/block:PostSummary}{Title}</title>
+	{block:Description}<meta name="description" content="{MetaDescription}">
+{/block:Description}
+
+	<link rel="alternate" type="application/rss+xml" href="{RSS}">
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="{Favicon}">
+	<link rel="apple-touch-icon" href="{PortraitURL-128}"></link>
+
+
+  	<!-- Default Colours -->
+     <meta name="color:Body Background" content="#f0f0f0"/>
+     <meta name="color:Header Background" content="#adadad"/>
+     <meta name="color:Header Text" content="#fff"/>
+     <meta name="color:Header Links" content="#ffffff"/>
+     <meta name="color:Post Header" content="#333"/>
+     <meta name="color:Body Text" content="#565656"/>
+     <meta name="color:Content Background" content="#ffffff"/>
+     <meta name="color:Link Text" content="#b3b3b3"/>
+     <meta name="color:Link Hover" content="#b3b3b3"/>
+
+
+   	<!-- Theme Options -->
+ 	 <meta name="image:Logo" content="">
+ 	 <meta name="image:Header Background" content="http://static.tumblr.com/axfiftt/gYbn8l9ux/labradorhead.jpg"/>
+	 <meta name="if:Show Navigation" content="1">
+	 <meta name="if:Show Random Button" content="1">
+	 <meta name="if:Show RSS Button" content="1">
+	 <meta name="if:Show Archive Button" content="1">
+	 <meta name="if:Show SearchBar" content="1">
+	 <meta name="if:Show Copyright" content="1"/>
+     <meta name="if:Show Social Navigation" content="1"/>
+      <meta name="if:Permalink share buttons" content="0">
+     	<meta name="if:Show Google Plus Link" content="0"/>
+     	<meta name="if:Show Facebook Link" content="0"/>
+     	<meta name="if:Show Instagram Link" content="0"/>
+     	<meta name="if:Show Twitter Link" content="0"/>
+     	<meta name="if:Show Youtube Link" content="0"/>
+     	<meta name="if:Show Vimeo Link" content="0"/>
+     	<meta name="if:Show Flickr Link" content="0"/>
+     	<meta name="if:Show Dribbble Link" content="0"/>
+     	<meta name="if:Show Behance Link" content="0"/>
+     	<meta name="if:Show Soundcloud Link" content="0"/>
+
+    <!-- Theme Options Text-->
+     <meta name="text:Google Analytics Id" content=""/>
+
+     <!-- Theme Options Social Media-->
+     <meta name="text:Google Plus Link" content=""/>
+     <meta name="text:Facebook Link" content=""/>
+     <meta name="text:Instagram Link" content=""/>
+     <meta name="text:Twitter Link" content=""/>
+     <meta name="text:Youtube Link" content=""/>
+     <meta name="text:Vimeo Link" content=""/>
+     <meta name="text:Flickr Link" content=""/>
+     <meta name="text:Dribbble Link" content=""/>
+     <meta name="text:Behance Link" content=""/>
+     <meta name="text:Soundcloud Link" content=""/>
+
+
+
+	<!-- Social Meta Data
+    ================================================== -->
+	<link rel="image_src" href="{Favicon}" />
+	<meta property="og:title" content="{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="{Favicon}" />
+	<meta property="og:description" content="{MetaDescription}" />
+	<meta name='text:Disqus Shortname' content='' />
+
+ 	<style type="text/css">
+	/*========================================================
+		Basics Page Setup
+	========================================================*/
+	html {background: {color:Body Background}}
+	body {
+		font: 12px/22px  'Libre Baskerville', Garamond, 'Times New Roman', serif !important;
+		font-weight: 300 !important;
+		background: {color:Body Background};
+
+	}
+    body {
+         color: {color:Body Text};
+           }
+	::-moz-selection {background: {color:Link Text}; }
+	::selection      {background: {color:Link Text}; }
+	/*========================================================
+		Typography
+	========================================================*/
+	h1, h2, h3, h4 {
+		font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+		font-weight: 400;
+    	color: {color:Header Text};
+	}
+	h1 a, h2 a, h3 a, h4 a {
+		font-weight: inherit;
+		color:{color:Header Text}
+	}
+	hr {
+		border: solid 1px {color:Body Background};
+	}
+	/*========================================================
+		Links
+	========================================================*/
+	a, a:visited {
+		color:{color:Link Text};
+	}
+	a {color: {color:Link Hover}}
+	a:hover {
+	    opacity: .85 !important;
+	    -webkit-transition: opacity 1.2s ease-out;
+          -moz-transition: opacity 1.2s ease-out;
+          -o-transition: opacity 1.2s ease-out;
+          transition: opacity 1.2s ease-out;
+	}
+	a:hover, a:focus {
+		color: {color:Link Hover};
+	}
+	/*========================================================
+		Buttons
+	========================================================*/
+	.button,button,a.button,input[type="submit"],input[type="button"] {
+		background: {color:Link Hover};
+	}
+	.button:hover,button:hover,input[type="submit"]:hover,input[type="button"]:hover {
+		background: {color:Link Hover};
+	}
+	.button:active,button:active,input[type="submit"]:active,input[type="button"]:active {
+		background: {color:Link Hover};
+	}
+	/*========================================================
+		Form Elements
+	========================================================*/
+	input[type="text"],select{
+		background: {color:Link Hover};
+	}
+	input[type="text"]:focus{
+		background:{color:Link Hover};
+	}
+	/*========================================================
+		Header
+	========================================================*/
+	header {
+		background: url({image:Header Background});
+		background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+
+	}
+	.layerbg {
+		background: rgba(0,0,0,.5);
+		position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+	}
+	.head-info {
+	    margin-top: 120px;
+	    width: 98.4375%;
+	    margin-left: 0.78125%;
+        margin-right: 0.78125%;
+        float: left;
+        display: inline;
+        font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+        color:{color:Header Text};
+	}
+	header .logo, header .logo a{
+		color: {color:Header Text};
+		width: 100%;
+		max-width: 360px;
+		display: block;
+		margin: 0 auto;
+	}
+	header .title h1, header .title h1 a{
+		color: {color:Header Text};
+		line-height: 35px;
+	}
+	header .title h1 a:after{
+		content:' ';
+        width: 40px;
+        display:block;
+        margin: 0 auto;
+        margin-top: 13px;
+        margin-bottom: -10px;
+        border:1px solid {color:Header Text};
+        border-radius:2px;
+        -webkit-border-radius:2px;
+        -moz-border-radius:2px;
+	}
+	header .title h1 a.no-after:after{
+        border:0 !important;
+	}
+	header .welcome-text .description {
+		font-family: 'Libre Baskerville', Garamond, 'Times New Roman', serif;
+		font-weight: 400;
+		font-style:italic;
+        color: {color:Header Text};
+        margin-top: 15px;
+	}
+	/*==== Logo ====*/
+	.logo {
+		background: url('{image:Background}')
+		top center no-repeat;
+	}
+	/*==== Search ====*/
+	h2.search-header {
+	    font-family: 'Libre Baskerville', Garamond, 'Times New Roman', serif;
+		font-weight: 400;
+        color: {color:Body Text};
+        font-size: 14px !important;
+        text-transform: none !important;
+	}
+	h2.search-header span{
+        opacity: .8;
+        display: inline;
+	}
+	p.search-none-header {
+	    font-family: 'Libre Baskerville', Garamond, 'Times New Roman', serif;
+		font-weight: 700;
+		font-size: 22px !important;
+		padding: 100px 0 !important;
+		margin: 0 auto;
+	}
+	.search-container {
+	    display: inline-block;
+	    float: left;
+	    margin-top: -55px;
+	    overflow: hidden !important;
+	}
+	.search-box {
+  transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+  width: 55px !important;
+  height: 55px !important;
+  /*border-radius: 27.5px !important;*/
+  border: none !important;
+  cursor: pointer;
+  background: white !important;
+  padding: 0 !important;
+  min-width: 0 !important;
+  margin-bottom: 0 !important;
+  overflow: hidden !important;
+}
+.search-box + label .search-icon {
+  color: grey;
+  -webkit-transition: color .9s ease-out;
+          -moz-transition: color .9s ease-out;
+          -o-transition: color .9s ease-out;
+          transition: color .9s ease-out;
+}
+.search-box:hover {
+  color: #333;
+  background: #c8c8c8;
+}
+.search-box:hover + label .search-icon {
+  color: #333;
+  -webkit-transition: color .9s ease-out;
+          -moz-transition: color .9s ease-out;
+          -o-transition: color .9s ease-out;
+          transition: color .9s ease-out;
+}
+.search-box:focus {
+  transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding-left: 15px !important;
+  padding-right: 30px !important;
+  cursor: text !important;
+  font-family: 'Libre Baskerville', Garamond, 'Times New Roman', serif;
+    font-weight: 400;
+  width: 138px !important;
+  border-radius: 0 !important;
+  background: #ebebeb !important;
+  color: black !important;
+  overflow: hidden !important;
+}
+.search-box:focus + label .search-icon {
+  color: black;
+}
+.search-box:not(:focus) {
+  text-indent: -5000px;
+}
+
+#search-submit {
+  position: relative;
+  left: -5000px;
+}
+
+.search-icon {
+  position: relative;
+  left: -36px;
+  font-size: 14px;
+  color: grey;
+  cursor: pointer;
+}
+
+    /*==== Social Icons ====*/
+    .social {
+    	margin-top:20px;
+    	text-align: center;
+    }
+    li.ico {
+		display:inline;
+		margin-right: 10px;
+		font-size:20px;
+		color: grey;
+		overflow: hidden;
+	}
+	li.ico a{
+		color: silver;
+	}
+	/*==== Navigation ====*/
+	.navigation ul{text-align:center; background-color: rgba(0,0,0,.7); padding: 18px 0 15px 0;}
+	.navigation li {
+		display:inline;
+		text-transform:uppercase;
+		padding:0 7px
+	}
+	.navigation li a {
+		font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+		font-weight: 400;
+		font-size:17px;
+    	color:{color:Header Links};
+	}
+	.navigation li a:hover {color:{color:Link Hover}}
+
+	@media screen and (max-width: 490px) {
+	    .nav-margin {margin-left: 55px;}
+	}
+	/*========================================================
+		Footer
+	========================================================*/
+
+    	/*==== Pagination ====*/
+			.pagination {
+                font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+		font-weight: 400;
+		text-transform: uppercase;
+		line-height: 10px;
+                color:{color:Link Hover}}
+			.pagination a{color:{color:Link Text};line-height: 10px;}
+            .pagination a:hover{
+				color: #ffffff;
+				padding:4px 9px;
+				background-color:{color:Link Text};
+            }
+			.pagination .current-page{
+				color: #ffffff;
+				padding:4px 9px;
+				background-color:{color:Link Text};
+				line-height: 10px;
+				}
+	/*========================================================
+		Posts
+	========================================================*/
+	.post {
+		background:{color:Content Background};
+	}
+	.post p {
+	    font-family: 'Libre Baskerville', Garamond, 'Times New Roman', serif;
+	    font-size: 14px;
+	}
+	.post h1 {
+	    font-size: 20px;
+	    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	    color: {color:Post Header};
+	}
+	.padding {padding:45px 55px}
+
+		/*==== Post Constants ====*/
+		.post-content .photo img {
+		    display: block;
+            margin: 0 auto;
+            margin-top: 15px;
+            margin-bottom: 15px;
+		}
+		.post-content h1{
+		    color: {color:Post Header};
+		}
+		p.source {padding-top:30px}
+    	.post-page .notes{margin-top:40px}
+		.post-share {
+			float: right;
+			display: inline;
+			width:50%
+		}
+		.post-share ul {float:right;}
+		.post-share ul li {
+			display:inline;
+			padding: 0 5px;
+			float: left;
+			color:{color:Link Hover};
+			font-size: 17px;
+			margin-bottom: 0;
+			-webkit-transition: opacity 1.2s ease-out;
+          -moz-transition: opacity 1.2s ease-out;
+          -o-transition: opacity 1.2s ease-out;
+          transition: opacity 1.2s ease-out;
+		}
+		.post-share ul li a {
+		    cursor: pointer;
+			color:rgb(204, 204, 204);
+		}
+		.post-share ul li:hover {
+			color:{color:Link Hover};
+			opacity:.55;
+			-webkit-transition: opacity 1.2s ease-out;
+          -moz-transition: opacity 1.2s ease-out;
+          -o-transition: opacity 1.2s ease-out;
+          transition: opacity 1.2s ease-out;
+		}
+		ul.share-slide {
+			display:none
+		}
+		/*===*/
+    	.global-share{
+    	    display: none;
+    	    position: absolute;
+    	    width: 100px;
+    	    margin: -130px 0 0 -50px;
+    	    padding: 15px;
+    	    background: #333;
+    	}
+    	.global-share li {
+    	    display: block;
+    	    line-height: 28px;
+    	    padding: 0;
+    	}
+    	.global-share li a{
+    	    font-size: 14px;
+    	    }
+		.perm {
+			font-size: 1.5em;
+		}
+		.shared-number {
+			float: left;
+			display: inline;
+			width: 50%;
+		}
+		.shared-number ul {
+			margin:0;
+			padding:0;
+		}
+		.shared-number ul li {
+			display:inline;
+			list-style:none
+		}
+
+		span.note-number {
+			font-family: 'Libre Baskerville', Garamond, 'Times New Roman', serif;
+			font-weight: 300;
+			font-size:15px;
+    		color: rgb(204, 204, 204);
+		}
+    	.cont-caption {padding-top:20px}
+    	.link-caption blockquote {
+    		font-size:22px;
+    		line-height:30px
+    	}
+
+
+        /*==== Text Post ====*/
+        .text-post li{
+            font-size: 22px;
+            line-height: 20px;
+            margin: 0 0 5px 30px;
+        }
+        .text-post p img{
+            display: block;
+            margin: 0 auto;
+        }
+       /*.text-post p,*/ .text-post blockquote{
+            font-size: 22px;
+            line-height: 30px;
+            margin: 0 0 12px 0;
+        }
+        .text-post blockquote{
+			font-style:italic !important;
+            margin:1.5em 0;
+            padding:.5em 10px;
+            border-left:5px solid {color:Link Text};
+        }
+
+        .text-post blockquote:before {
+            margin-right:.25em;
+            vertical-align:-.4em;
+        }
+
+    	/*==== Photoset ====*/
+    		.photoset img {padding: 5px 0}
+
+		/*==== Video ====*/
+		.video iframe.soundcloud_audio_player {
+			padding-bottom:0!important;
+			width: 100%;
+		}
+
+    	/*==== Audio ====*/
+		.audio img {
+			 display:none
+		}
+        .audio_player {
+            position: relative;padding-bottom: 12.25%; /* 16:9 */
+            height: 0;background:{color:Content Background}
+        }
+        .audio_player iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:{color:Content Background}
+        }
+		/*==== Chat ====*/
+    	ul.answer li {
+            font-family: 'Libre Baskerville', Garamond, 'Times New Roman', serif;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 30px;
+            margin: 0;
+            border-bottom:1px solid #f0f0f0
+           }
+   		ul.answer li span.label{
+            font-family: 'Libre Baskerville', Garamond, 'Times New Roman', serif;
+            font-weight: 600;}
+
+		/*==== Quote ====*/
+		blockquote, q, .quote {
+			font-family: 'Libre Baskerville', Garamond, 'Times New Roman', serif;
+			font-weight: 300 !important;
+			font-style:italic
+		}
+
+        /*==== Audio ====*/
+        .spotify_audio_player{ height:80px; !important}
+
+                 div.photoset-grid,
+div.photoset-grid-custom,
+div.photoset-grid-lightbox {
+    margin: 0 auto;
+display: block;
+  margin: 0 0 2em 0; }
+  div.photoset-grid a:focus,
+  div.photoset-grid-custom a:focus,
+  div.photoset-grid-lightbox a:focus {
+    outline: none; }
+  div.photoset-grid img,
+  div.photoset-grid-custom img,
+  div.photoset-grid-lightbox img {
+    max-width: 100%; }
+
+    .fancybox-opened .fancybox-skin {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+    /*=================*/
+
+    @media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
+    /* Retina-specific stuff here */
+
+    }
+	/*========================================================
+		Custom Styles
+	========================================================*/
+     {CustomCSS}
+  	</style>
+     <link rel="stylesheet" href="http://static.tumblr.com/axfiftt/czzn8od6b/labrador.css">
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/cbskbgp/94bmpagos/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/cbskbgp/aZ0mpb7vq/scripts.js"></script>
+
+</head>
+<body>
+
+<!-- start: Main Header Section -->
+<header>
+    <div class="layerbg">
+	<div class="container">
+
+		<!-- start: Logo, Title and Intro -->
+		<div class="sixteen head-info">
+			<div class="logo"><a href="/"><center><img src="{image:Logo}"></center></a></div>
+			<div class="title"> <h1><a href="/">{Title}</a></h1></div>
+			<div class="welcome-text">{block:Description}<div class="description">{Description}</div>{/block:Description}</div>
+		</div>
+		<!-- end: Logo, Title and Intro -->
+
+	</div>
+	</div>
+</header>
+<!-- end: Main Header Section -->
+
+<!-- start: Main Content Area -->
+<div class="content-wrap">
+	<div class="container">
+
+		 		<!-- start: Navigation -->
+		{block:IfShowNavigation}
+		<div class="sixteen columns">
+			<div class="navigation">
+            <ul>
+            {block:HasPages}
+    {block:Pages}
+    <li> <a href="{URL}">{Label}</a></li>
+    {/block:Pages}
+    {/block:HasPages}
+            	{block:IfShowRandomButton}<li><a href="/random">Random</a></li>{/block:IfShowRandomButton}
+            	{block:HasPages}
+    {block:Pages}
+    <li> <a href="{URL}">{Label}</a></li>
+    {/block:Pages}
+    {/block:HasPages}
+				{block:AskEnabled}<li><a href="/ask" title="{AskLabel}">{AskLabel}</li></a>{/block:AskEnabled}
+				{block:SubmissionsEnabled}<li><a href="/submit" title="submissions">{text:Submissions Button Text}</li></a>{/block:SubmissionsEnabled}
+				{block:IfShowArchiveButton}<li><a href="/archive" title="archive">{lang:Archive}</a></li>{/block:IfShowArchiveButton}
+				{block:IfShowRSSButton}<li><a href="{RSS}" title="subscribe">{lang:RSS}</a></li>{/block:IfShowRSSButton}
+            </ul>
+			</div>
+		</div>
+		{/block:IfShowNavigation}
+	 	<!-- end: Navigation -->
+	<div class="sixteen columns">
+
+
+	<!-- start: block of posts -->
+	<!-- start: Search Bar -->
+		{block:IfShowSearchBar}{block:SearchForm}
+		<form class="search-container" action="/search" method="get">
+  <input id="search-box" type="text" class="search-box" name="q" value="{SearchQuery}"/>
+  <label for="search-box"><i class="fa fa-search search-icon"></i></label>
+  <input type="submit" id="search-submit" />
+</form>
+{/block:SearchForm}{/block:IfShowSearchBar}
+		<!-- end: Search Bar -->
+		<!-- start: Search Results Post -->
+		{block:SearchPage}
+		<article class="post">
+			<div class="padding">
+		<hr>
+		<h2 class="search-header">Search results for: <span>"{SearchQuery}"</span></h2>
+		<hr>
+		</div>
+		</article>
+		{/block:SearchPage}
+		{block:NoSearchResults}
+		<article class="post">
+			<div class="padding">
+		<hr>
+		<p class="search-none-header">Sorry, no search results found.</p>
+		<hr>
+		</div>
+		</article>
+		{/block:NoSearchResults}
+		<!--end: Search Results Post-->
+	{block:Posts}
+		<!-- start: Text Post -->
+		{block:Text}
+		<article class="post">
+			<div class="padding">
+
+				<div class="post-content text-post">
+					{block:Title}<a href="{Permalink}"><h1>{Title}</h1></a>{/block:Title}
+					<p>{Body}</p>
+				</div>
+
+				<div class="share-wrap">
+					<div class="post-share">
+				 		<ul>
+				 		{block:IfPermalinkShareButtons}
+					<li class="share-this">
+                <a><i class="fa fa-share-square-o"></i></a></li>
+            <ul class="global-share">
+
+                <li class="facebook">
+                    <a href="https://www.facebook.com/sharer.php?u={Permalink}">Facebook</a>
+                </li>
+
+                <li class="twitter">
+                    <a href="https://twitter.com/intent/tweet?url={ShortURL}">Twitter</a>
+                </li>
+
+                <li class="google">
+                    <a href="https://plusone.google.com/_/+1/confirm?hl=en&url={Permalink}">Google+</a>
+                </li>
+            </ul>{/block:IfPermalinkShareButtons}
+				 			<li class="permalink"> <a href="{Permalink}"> <i class="fa fa-plus"></i></a> </li>
+				 			<li>{LikeButton size="17"}</li>
+				 			<li>{ReblogButton size="17"}</li>
+ 						</ul>
+					</div>
+					<div class="shared-number">
+						<ul>
+							<li class="caption">{block:Caption} {/block:Caption}</li>
+							<a href="{Permalink}"><li><span class="note-number">{NoteCountWithLabel}</span></li></a>
+						</ul>
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div class="post-page">
+				  	{block:Posts}
+            			{PostNotes}
+        			{/block:Posts}
+				</div>
+
+			</div>
+			<hr>
+		</article>
+		{/block:Text}
+		<!--end: Text Post-->
+
+
+
+
+
+        <!-- start: Quote Post -->
+		{block:Quote}
+		<article class="post">
+			<div class="padding">
+
+				<div class="post-content">
+					<div class="quote">
+						<blockquote class="words {Length}">{Quote}</blockquote>
+						{block:Source}<p class="source">&mdash; {Source}</p>{/block:Source}
+					</div>
+				</div>
+
+				<div class="share-wrap">
+					<div class="post-share">
+				 		<ul class="like_and_reblog_buttons">
+				 		{block:IfPermalinkShareButtons}
+					<li class="share-this">
+                <a><i class="fa fa-share-square-o"></i></a></li>
+            <ul class="global-share">
+
+                <li class="facebook">
+                    <a href="https://www.facebook.com/sharer.php?u={Permalink}">Facebook</a>
+                </li>
+
+                <li class="twitter">
+                    <a href="https://twitter.com/intent/tweet?url={ShortURL}">Twitter</a>
+                </li>
+
+                <li class="google">
+                    <a href="https://plusone.google.com/_/+1/confirm?hl=en&url={Permalink}">Google+</a>
+                </li>
+            </ul>{/block:IfPermalinkShareButtons}
+
+				 		<li class="permalink"> <a href="{Permalink}"> <i class="fa fa-plus"></i></a> </li>
+				 		<li>{LikeButton size="17"}  </li>
+				 		<li>{ReblogButton size="17"} </li>
+ 						</ul>
+					</div>
+
+					<div class="shared-number">
+						<ul>
+							<li class="caption"></li>
+							<a href="{Permalink}"><li><span class="note-number">{NoteCountWithLabel}</span></li></a>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="post-page">
+				  	{block:Posts}
+            			{PostNotes}
+        			{/block:Posts}
+				</div>
+
+			</div>
+			<hr>
+		</article>
+		{/block:Quote}
+		<!--end: Quote Post-->
+
+
+		<!-- start: Link Post -->
+		{block:Link}
+		<article class="post">
+			<div class="padding">
+
+				<div class="post-content">
+					<h1><a href="{URL}" {Target}>{Name}</a></h1>
+					{block:Description}<div class="link-caption">{Description}</div>{/block:Description}
+				</div>
+
+				<div class="share-wrap">
+					<div class="post-share">
+				 		<ul>
+				 		{block:IfPermalinkShareButtons}
+					<li class="share-this">
+                <a><i class="fa fa-share-square-o"></i></a></li>
+            <ul class="global-share">
+
+                <li class="facebook">
+                    <a href="https://www.facebook.com/sharer.php?u={Permalink}">Facebook</a>
+                </li>
+
+                <li class="twitter">
+                    <a href="https://twitter.com/intent/tweet?url={ShortURL}">Twitter</a>
+                </li>
+
+                <li class="google">
+                    <a href="https://plusone.google.com/_/+1/confirm?hl=en&url={Permalink}">Google+</a>
+                </li>
+            </ul>{/block:IfPermalinkShareButtons}
+
+				 			<li class="permalink"> <a href="{Permalink}"> <i class="fa fa-plus"></i></a> </li>
+				 			<li>{LikeButton size="17"}  </li>
+				 			<li>{ReblogButton size="17"} </li>
+ 						</ul>
+					</div>
+					<div class="shared-number">
+						<ul>
+							<li class="caption"></li>
+							<a href="{Permalink}"><li><span class="note-number">{NoteCountWithLabel}</span></li></a>
+						</ul>
+					</div>
+				</div>
+				<div class="clear"></div>
+
+				<div class="post-page">
+				  	{block:Posts}
+            			{PostNotes}
+        			{/block:Posts}
+				</div>
+
+			</div>
+			<hr>
+		</article>
+		{/block:Link}
+		<!--end: Link Post-->
+
+		<!-- start: Video Post -->
+		{block:Video}
+		<article class="post">
+			<div class="padding">
+
+				<div class="post-content">
+					<div class="video">
+						{Video-500}
+					</div>
+
+					<div class="cont-caption">	{block:Caption}{Caption}{/block:Caption}    </div>
+
+				</div>
+
+				<div class="share-wrap">
+					<div class="post-share">
+				 		<ul>
+				 		{block:IfPermalinkShareButtons}
+					<li class="share-this">
+                <a><i class="fa fa-share-square-o"></i></a></li>
+            <ul class="global-share">
+
+                <li class="facebook">
+                    <a href="https://www.facebook.com/sharer.php?u={Permalink}">Facebook</a>
+                </li>
+
+                <li class="twitter">
+                    <a href="https://twitter.com/intent/tweet?url={ShortURL}">Twitter</a>
+                </li>
+
+                <li class="google">
+                    <a href="https://plusone.google.com/_/+1/confirm?hl=en&url={Permalink}">Google+</a>
+                </li>
+            </ul>{/block:IfPermalinkShareButtons}
+
+				 			<li class="permalink"> <a href="{Permalink}"> <i class="fa fa-plus"></i></a> </li>
+				 			<li>{LikeButton size="17"}  </li>
+				 			<li>{ReblogButton size="17"} </li>
+ 						</ul>
+					</div>
+					<div class="shared-number">
+						<ul>
+							<li class="caption"></li>
+							<a href="{Permalink}"><li><span class="note-number">{NoteCountWithLabel}</span></li></a>
+						</ul>
+					</div>
+				</div>
+				<div class="clear"></div>
+
+				<div class="post-page">
+				  	{block:Posts}
+            			{PostNotes}
+        			{/block:Posts}
+				</div>
+			</div>
+			<hr>
+		</article>
+		{/block:Video}
+		<!--end: Video Post-->
+
+
+		<!-- start: Audio Post -->
+		{block:Audio}
+		<article class="post">
+			<div class="padding">
+
+				<div class="post-content">
+					<div class="audio">
+						{block:AlbumArt}<img src="{AlbumArtURL}" alt="">{/block:AlbumArt}
+						{AudioPlayerGrey}
+						{block:Caption}<div class="cont-caption">{Caption}</div>{/block:Caption}
+					</div>
+				</div>
+
+				<div class="share-wrap">
+					<div class="post-share">
+				 		<ul>
+				 		{block:IfPermalinkShareButtons}
+					<li class="share-this">
+                <a><i class="fa fa-share-square-o"></i></a></li>
+            <ul class="global-share">
+
+                <li class="facebook">
+                    <a href="https://www.facebook.com/sharer.php?u={Permalink}">Facebook</a>
+                </li>
+
+                <li class="twitter">
+                    <a href="https://twitter.com/intent/tweet?url={ShortURL}">Twitter</a>
+                </li>
+
+                <li class="google">
+                    <a href="https://plusone.google.com/_/+1/confirm?hl=en&url={Permalink}">Google+</a>
+                </li>
+            </ul>{/block:IfPermalinkShareButtons}
+
+				 			<li class="permalink"> <a href="{Permalink}"> <i class="fa fa-plus"></i></a> </li>
+				 			<li>{LikeButton size="17"}  </li>
+				 			<li>{ReblogButton size="17"} </li>
+ 						</ul>
+					</div>
+					<div class="shared-number">
+						<ul>
+							<li class="caption"></li>
+							<a href="{Permalink}"><li><span class="note-number">{NoteCountWithLabel}</span></li></a>
+						</ul>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="post-page">
+				  	{block:Posts}
+            			{PostNotes}
+        			{/block:Posts}
+				</div>
+			</div>
+			<hr>
+		</article>
+		{/block:Audio}
+		<!--end: Audio Post-->
+
+
+		<!-- start: Photo Post -->
+		{block:Photo}
+		<article class="post">
+			<div class="padding">
+
+				<div class="post-content">
+					<div class="photo">
+						{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}
+					    {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+					</div>
+				</div>
+
+				<div class="share-wrap">
+					<div class="post-share">
+				 		<ul>
+				 		{block:IfPermalinkShareButtons}
+					<li class="share-this">
+                <a><i class="fa fa-share-square-o"></i></a></li>
+            <ul class="global-share">
+
+                <li class="facebook">
+                    <a href="https://www.facebook.com/sharer.php?u={Permalink}">Facebook</a>
+                </li>
+
+                <li class="twitter">
+                    <a href="https://twitter.com/intent/tweet?url={ShortURL}">Twitter</a>
+                </li>
+
+                <li class="google">
+                    <a href="https://plusone.google.com/_/+1/confirm?hl=en&url={Permalink}">Google+</a>
+                </li>
+            </ul>{/block:IfPermalinkShareButtons}
+
+				 			<li class="permalink"> <a href="{Permalink}"> <i class="fa fa-plus"></i></a> </li>
+				 			<li>{LikeButton size="17"}  </li>
+				 			<li>{ReblogButton size="17"} </li>
+ 						</ul>
+					</div>
+					<div class="shared-number">
+						<ul>
+							<li class="caption"></li>
+							<a href="{Permalink}"><li><span class="note-number">{NoteCountWithLabel}</span></li></a>
+						</ul>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="post-page">
+				  	{block:Posts}
+            			{PostNotes}
+        			{/block:Posts}
+				</div>
+			</div>
+			<hr>
+		</article>
+		{/block:Photo}
+		<!--end: Photo Post-->
+
+	    	<!-- start: Photo Set Post -->
+    	{block:Photoset}
+		<article class="post">
+			<div class="padding">
+
+				<div class="post-content">
+					<div class="photoset">
+
+ <div class="photoset-grid" data-layout="{PhotosetLayout}" data-id="photoset{PostID}">
+    {block:Photos}
+    <div class="photo">
+      {LinkOpenTag}<img src="{PhotoURL-HighRes}" data-fancybox-title="{Caption}"
+        {block:HighRes}data-highres="{PhotoURL-HighRes}"{/block:HighRes}
+        {block:Caption}alt="{Caption}"{/block:Caption} />{LinkCloseTag}
+        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+        </div>
+    {/block:Photos}
+  </div>
+					</div>
+				</div>
+
+				<div class="share-wrap">
+					<div class="post-share">
+				 		<ul>
+				 		{block:IfPermalinkShareButtons}
+					<li class="share-this">
+                <a><i class="fa fa-share-square-o"></i></a></li>
+            <ul class="global-share">
+
+                <li class="facebook">
+                    <a href="https://www.facebook.com/sharer.php?u={Permalink}">Facebook</a>
+                </li>
+
+                <li class="twitter">
+                    <a href="https://twitter.com/intent/tweet?url={ShortURL}">Twitter</a>
+                </li>
+
+                <li class="google">
+                    <a href="https://plusone.google.com/_/+1/confirm?hl=en&url={Permalink}">Google+</a>
+                </li>
+            </ul>{/block:IfPermalinkShareButtons}
+
+				 			<li class="permalink"> <a href="{Permalink}"> <i class="fa fa-plus"></i></a> </li>
+				 			<li>{LikeButton size="17"}  </li>
+				 			<li>{ReblogButton size="17"} </li>
+ 						</ul>
+					</div>
+					<div class="shared-number">
+						<ul>
+							<li class="caption"></li>
+							<a href="{Permalink}"><li><span class="note-number">{NoteCountWithLabel}</span></li></a>
+						</ul>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="post-page">
+				  	{block:Posts}
+            			{PostNotes}
+        			{/block:Posts}
+				</div>
+			</div>
+			<hr>
+		</article>
+		{/block:Photoset}
+		<!--end: Photo Set Post-->
+
+		<!-- start: Panorama Post -->
+		{block:Panorama}
+		<article class="post">
+			<div class="padding">
+
+				<div class="post-content">
+					<div class="photo">
+                        {LinkOpenTag}
+                            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                        {LinkCloseTag}
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+
+					</div>
+				</div>
+
+				<div class="share-wrap">
+					<div class="post-share">
+				 		<ul>
+				 		{block:IfPermalinkShareButtons}
+					<li class="share-this">
+                <a><i class="fa fa-share-square-o"></i></a></li>
+            <ul class="global-share">
+
+                <li class="facebook">
+                    <a href="https://www.facebook.com/sharer.php?u={Permalink}">Facebook</a>
+                </li>
+
+                <li class="twitter">
+                    <a href="https://twitter.com/intent/tweet?url={ShortURL}">Twitter</a>
+                </li>
+
+                <li class="google">
+                    <a href="https://plusone.google.com/_/+1/confirm?hl=en&url={Permalink}">Google+</a>
+                </li>
+            </ul>{/block:IfPermalinkShareButtons}
+
+				 			<li class="permalink"> <a href="{Permalink}"> <i class="fa fa-plus"></i></a> </li>
+				 			<li>{LikeButton size="17"}  </li>
+				 			<li>{ReblogButton size="17"} </li>
+ 						</ul>
+					</div>
+					<div class="shared-number">
+						<ul>
+							<li class="caption"></li>
+							<a href="{Permalink}"><li><span class="note-number">{NoteCountWithLabel}</span></li></a>
+						</ul>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="post-page">
+				  	{block:Posts}
+            			{PostNotes}
+        			{/block:Posts}
+				</div>
+			</div>
+			<hr>
+		</article>
+		{/block:Panorama}
+		<!--end: Panorama Post-->
+
+
+    	<!-- start: Chat Post -->
+		{block:Chat}
+		<article class="post">
+			<div class="padding">
+
+				<div class="post-content">
+                    {block:Title}
+                            <h1><a href="{Permalink}">{Title}</a></h1>
+                        {/block:Title}
+
+					  <ul class="answer">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}
+
+                                    {Line}
+                                </li>
+                            {/block:Lines}
+                    </ul>
+				</div>
+
+				<div class="share-wrap">
+					<div class="post-share">
+				 		<ul>
+				 		{block:IfPermalinkShareButtons}
+					<li class="share-this">
+                <a><i class="fa fa-share-square-o"></i></a></li>
+                <div>
+            <ul class="global-share">
+
+                <li class="facebook">
+                    <a href="https://www.facebook.com/sharer.php?u={Permalink}">Facebook</a>
+                </li>
+
+                <li class="twitter">
+                    <a href="https://twitter.com/intent/tweet?url={ShortURL}">Twitter</a>
+                </li>
+
+                <li class="google">
+                    <a href="https://plusone.google.com/_/+1/confirm?hl=en&url={Permalink}">Google+</a>
+                </li>
+            </ul></div>{/block:IfPermalinkShareButtons}
+
+				 			<li class="permalink"> <a href="{Permalink}"> <i class="fa fa-plus"></i></a> </li>
+				 			<li>{LikeButton size="17"}  </li>
+				 			<li>{ReblogButton size="17"} </li>
+ 						</ul>
+					</div>
+					<div class="shared-number">
+						<ul>
+							<li class="caption"></li>
+							<a href="{Permalink}"><li><span class="note-number">{NoteCountWithLabel}</span></li></a>
+						</ul>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="post-page">
+				  	{block:Posts}
+            			{PostNotes}
+        			{/block:Posts}
+				</div>
+			</div>
+			<hr>
+		</article>
+	    {/block:Chat}
+		<!--end: Chat Post-->
+
+		{/block:Posts}
+		<!-- end: block of posts -->
+
+		<!-- start: Disqus -->
+		  {block:PermalinkPage}
+        {block:IfDisqusShortname}
+          {block:Permalink}
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = '{text:Disqus Shortname}';
+ 	(function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+          {/block:Permalink}
+        {/block:IfDisqusShortname}
+      {/block:PermalinkPage}
+
+    <!-- end: Disqus -->
+        </div>
+ 	</div>
+</div>
+
+
+<!-- start: Footer -->
+	<footer>
+		<div class="container">
+
+				<div class="sixteen columns">
+				{block:Pagination}
+					<div class="pagination">
+					{block:PreviousPage}<a class="prev" href="{PreviousPage}">{lang:Previous}</a>{/block:PreviousPage}
+
+					{block:JumpPagination length="5"}
+						{block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
+						{block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
+					{/block:JumpPagination}
+
+					{block:NextPage}<a class="next" href="{NextPage}">{lang:Next}</a>{/block:NextPage}
+					</div>
+				{/block:Pagination}
+				</div>
+				<div class="sixteen columns copyright">
+					<!-- start: Social Bar -->
+		{block:IfShowSocialNavigation}
+
+			<div class="social">
+
+					{block:IfShowGooglePlusLink}<li class="ico"><a href="{text:Google Plus Link}"><i class="fa fa-google-plus"></i></a></li>{/block:IfShowGooglePlusLink}
+					{block:IfShowFacebookLink}<li class="ico"><a href="{text:Facebook Link}"><i class="fa fa-facebook"></i></a></li>{/block:IfShowFacebookLink}
+					{block:IfShowInstagramLink}<li class="ico"><a href="{text:Instagram Link}"><i class="fa fa-instagram"></i></a></li>{/block:IfShowInstagramLink}
+					{block:IfShowTwitterLink}<li class="ico"><a href="{text:Twitter Link}"><i class="fa fa-twitter"></i></a></li>{/block:IfShowTwitterLink}
+					{block:IfShowYoutubeLink}<li class="ico"><a href="{text:Youtube Link}"><i class="fa fa-youtube"></i></a></li>{/block:IfShowYoutubeLink}
+					{block:IfShowVimeoLink}<li class="ico"><a href="{text:Vimeo Link}"><i class="fa fa-vimeo"></i></a></li>{/block:IfShowVimeoLink}
+					{block:IfShowFlickrLink}<li class="ico"><a href="{text:Flickr Link}"><i class="fa fa-flickr"></i></a></li>{/block:IfShowFlickrLink}
+					{block:IfShowDribbbleLink}<li class="ico"><a href="{text:Dribbble Link}"><i class="fa fa-dribbble"></i></a></li>{/block:IfShowDribbbleLink}
+					{block:IfShowBehanceLink}<li class="ico"><a href="{text:Behance Link}"><i class="fa fa-behance"></i></a></li>{/block:IfShowBehanceLink}
+					{block:IfShowSoundcloudLink}<li class="ico"><a href="{text:Soundcloud Link}"><i class="fa fa-soundcloud"></i></a></li>{/block:IfShowSoundcloudLink}
+
+			</div>
+
+		{/block:IfShowSocialNavigation}
+		<!-- end: Social Bar -->
+				<p>
+		 		{block:IfShowCopyright}
+					&copy; {Title} {CopyrightYears}
+                 {/block:IfShowCopyright}
+                 <br>Theme by <a href="http://febril.co" target="_blank">Febril</a>
+                  </p>
+            	</div>
+		</div>
+	</footer>
+<!-- end: Footer -->
+       <script src="http://static.tumblr.com/cbskbgp/6Dumpeplv/jquery.photoset-grid.js"></script>
+
+        <script>
+  $('.photoset-grid').photosetGrid({
+
+    width: '100%',
+    gutter: '5px',
+    highresLinks: true,
+    lowresWidth: 300,
+    rel: 'gallery-01',
+    onInit: function(){},
+    onComplete: function(){
+        $('.photoset-grid').css({
+            'visiblity': 'visible'
+        });
+    }
+});
+</script>
+	<!-- Start of Tumblrbox Code -->
+<script type='text/javascript'>
+/*
+ * tumblrbox - Lightbox effect for Tumblr
+ * using FancyBox
+ *
+ * Copyright (c) 2011 Picuous
+ * Forked and edited by @FebrilCuevas
+ *
+ * Version: 1
+ *
+ * Licensed under the MIT license
+ *   http://www.opensource.org/licenses/mit-license.php
+ */
+
+;(function() {
+
+  if(typeof(window.console) === "undefined" || typeof(window.console.log) === "undefined") {
+    window.console = {
+      debug: function() {},
+      log: function() {},
+      warn: function() {},
+      error: function() {}
+    }
+  }
+  console.debug('tumblrbox');
+
+  // Global variables
+  var otherlib = false;
+
+  if(typeof jQuery != 'undefined') {
+    //console.debug('This page is already using jQuery v'+jQuery.fn.jquery);
+  } else if (typeof $ == 'function') {
+    //console.debug('This page is using another $ library');
+    otherlib = true;
+  }
+
+  // more or less stolen form jquery core and adapted by paul irish
+  function load_file(url, success) {
+    var script;
+    if(url.match(/\.js$/)) {
+      script = document.createElement('script');
+      script.src = url;
+      script.type = 'text/javascript';
+    } else {
+      script = document.createElement('link');
+      script.rel = 'stylesheet';
+      script.type = 'text/css';
+      script.href = url;
+    }
+    var head = document.getElementsByTagName('head')[0],
+        done = false;
+    // Attach handlers for all browsers
+    script.onload=script.onreadystatechange = function() {
+      if(!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') ) {
+        done = true;
+        if(success) {
+          success();
+        }
+        script.onload = script.onreadystatechange = null;
+        //head.removeChild(script);
+      }
+    };
+    head.appendChild(script);
+  }
+  load_file('http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', function() {
+    if(typeof jQuery=='undefined') {
+      console.debug('Sorry, but jQuery wasn\'t able to load');
+    } else {
+      $ = jQuery.noConflict();
+      console.debug('loaded '+$.fn.jquery);
+      load_file('//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js', function() {
+        console.debug('loaded fancybox');
+
+        var $tumblr_pics = $('a[href*=".media.tumblr.com/"]>img[src*=".media.tumblr.com/"]').parent();
+        $tumblr_pics.fancybox({
+    helpers : {
+        overlay : {
+            css : {
+                'background' : 'rgba(0, 0, 0, 0.95)'
+                  }
+                  }
+              }
+        });
+        $tumblr_pics.fancybox({
+          'type': 'image',
+          'padding': 0,
+          'closeBtn': false,
+          'autoCenter': true,
+          'autoResize': true,
+          'autoSize': true
+          });
+
+        console.debug($tumblr_pics.length+' tumblr pictures tumblrboxed');
+
+
+        // Flickr doesn't allow displaying its content as in an iframe
+        /*var $flickr_pics = $('a[href*="http://www.flickr.com/photos"]>img[src*="media.tumblr.com"]').parent();
+        $flickr_pics.fancybox({
+          'type': 'iframe',
+          'transitionIn': 'elastic',
+          'transitionOut': 'elastic',
+          'opacity': true,
+          'titleShow': false,
+          'padding': 0,
+          'overlayShow': true
+        });
+        console.debug($flickr_pics.length+' flickr pictures tumblrboxed');*/
+      });
+    }
+  });
+
+  // Add CSS
+  load_file('//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css');
+
+})();
+
+</script>
+<!-- End of Tumblrbox Code -->
+<script>
+    //intro scroll opacity change
+function ChangeOpacity() {
+    var divs = $('header');
+    $(window).on('scroll', function() {
+        var st = $(this).scrollTop();
+        var ht = ($('header').height()-220);
+        divs.css({ 'opacity' : (1 - st/ht)});
+    });
+}
+function ResetOpacity() {
+    var divs = $('header');
+    $(window).on('scroll', function() {
+       divs.css({ 'opacity' : (1)});
+   });
+}
+$(document).ready(function() {
+// Optimalisation: Store the references outside the event handler:
+var $window = $(window);
+function checkWidth() {
+    var windowsize = $window.width();
+    if (windowsize > 846) {
+        ChangeOpacity()
+    }
+    else {
+        ResetOpacity()
+    }
+}
+// Execute on load
+checkWidth();
+// Bind event listener
+$(window).resize(checkWidth);
+});
+
+</script>
+<script>
+        $('header .title h1 a:empty').addClass('no-after');
+
+        $(".post-share ul li a").click(function() {
+            $(this).parent().siblings(".global-share").fadeToggle();
+        });
+
+$(document).ready( function() {
+    var metaHtml = $("meta[name='if:Show SearchBar']").prop("content");
+    if (metaHtml = 1) {
+  $( ".navigation ul" ).addClass( "nav-margin" );
+}
+});
+</script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{text:Google Analytics Id}']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>
