@@ -633,11 +633,6 @@ only screen and (min-resolution: 192dpi) {
     {/block:Pages}
     {/block:HasPages}
             	{block:IfShowRandomButton}<li><a href="/random">Random</a></li>{/block:IfShowRandomButton}
-            	{block:HasPages}
-    {block:Pages}
-    <li> <a href="{URL}">{Label}</a></li>
-    {/block:Pages}
-    {/block:HasPages}
 				{block:AskEnabled}<li><a href="/ask" title="{AskLabel}">{AskLabel}</li></a>{/block:AskEnabled}
 				{block:SubmissionsEnabled}<li><a href="/submit" title="submissions">{text:Submissions Button Text}</li></a>{/block:SubmissionsEnabled}
 				{block:IfShowArchiveButton}<li><a href="/archive" title="archive">{lang:Archive}</a></li>{/block:IfShowArchiveButton}
